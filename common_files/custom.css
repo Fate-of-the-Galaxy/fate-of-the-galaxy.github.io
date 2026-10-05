@@ -83,3 +83,8 @@
   .icon-link:hover > .bi {
     transform: translate(.25rem);
   }
+
+  /* Reveal the check mark on the active entry of the theme dropdown */
+  #bd-theme ~ .dropdown-menu .active .bi.ms-auto {
+    display: block !important;
+  }
