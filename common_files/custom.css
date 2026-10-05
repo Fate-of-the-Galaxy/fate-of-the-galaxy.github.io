@@ -88,3 +88,32 @@
   #bd-theme ~ .dropdown-menu .active .bi.ms-auto {
     display: block !important;
   }
+
+  /* Carousel arrows.
+     Bootstrap 5.3 applies `filter: invert(1) grayscale(100)` to these icons under
+     data-bs-theme="dark", turning the default white chevrons black — invisible
+     against dark screenshots. Force them back to white and sit them on a dark
+     disc so they stay legible over bright and dark frames in either theme. */
+  #screenshotCarousel .carousel-control-prev,
+  #screenshotCarousel .carousel-control-next {
+    opacity: .85;
+  }
+
+  #screenshotCarousel .carousel-control-prev:hover,
+  #screenshotCarousel .carousel-control-next:hover,
+  #screenshotCarousel .carousel-control-prev:focus,
+  #screenshotCarousel .carousel-control-next:focus {
+    opacity: 1;
+  }
+
+  #screenshotCarousel .carousel-control-prev-icon,
+  #screenshotCarousel .carousel-control-next-icon {
+    filter: none;
+    width: 2.75rem;
+    height: 2.75rem;
+    background-color: rgba(0, 0, 0, .55);
+    background-size: 1.1rem 1.1rem;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .35);
+  }
